@@ -31,20 +31,7 @@ const loanApplicationSchema = new mongoose.Schema({
     listing: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Listing'
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
-    },
-    updatedAt: {
-        type: Date,
-        default: Date.now
     }
-});
-
-loanApplicationSchema.pre('save', function (next) {
-    this.updatedAt = Date.now();
-    next();
-});
+}, { timestamps: true });
 
 module.exports = mongoose.model('LoanApplication', loanApplicationSchema);

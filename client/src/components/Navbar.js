@@ -36,16 +36,12 @@ const Navbar = () => {
       <div className="container navbar-content">
         <Link to="/" className="navbar-logo">
           <img
-            src="/logo.png"
-            alt="Real Estate Pro"
+            src="/logo.svg"
+            alt="EstateFlow"
             className="logo-image"
             style={{ height: '50px', width: 'auto' }}
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'inline';
-            }}
           />
-          <span style={{ display: 'none' }}>🏠 RealEstatePro</span>
+          <span style={{ display: 'none' }}>🏠 EstateFlow</span>
         </Link>
 
         <div className="navbar-actions">

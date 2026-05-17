@@ -18,15 +18,11 @@ export function Footer() {
               className="flex items-center gap-2 mb-4"
             >
               <img
-                src="/logo.png"
-                alt="Real Estate Pro logo"
-                onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = '/logo.svg';
-                }}
+                src="/logo.svg"
+                alt="EstateFlow logo"
                 className="w-10 h-10 object-contain rounded-full"
               />
-              <span className="text-2xl tracking-tight">Real Estate Pro</span>
+              <span className="text-2xl tracking-tight">EstateFlow</span>
             </motion.div>
             <p className="text-sm opacity-60 leading-relaxed">
               Your trusted partner in finding the perfect property with reliable real estate solutions tailored to your needs.
@@ -56,7 +52,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm opacity-60">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>contact@realestatepro.com</span>
+                <span>contact@estateflow.com</span>
               </li>
               <li className="flex items-start gap-3 text-sm opacity-60">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -96,7 +92,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center">
           <p className="text-sm opacity-60">
-            © {currentYear} Real Estate Pro. All rights reserved.
+            © {currentYear} EstateFlow. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 {
-  "name": "real-estate-platform",
+  "name": "estateflow-platform",
   "version": "1.0.0",
-  "description": "Real Estate Platform Monorepo",
+  "description": "EstateFlow Platform Monorepo",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run dev",
@@ -9,6 +9,7 @@
     "start:prod": "cd server && npm install && npm start",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
     "prisma:migrate": "cd server && npx prisma migrate dev",
+    "seed": "npm run seed --prefix server",
     "install-client": "npm install --prefix client",
     "install-server": "npm install --prefix server",
     "build-client": "npm run build --prefix client",

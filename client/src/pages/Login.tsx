@@ -38,10 +38,35 @@ export default function Login() {
     setLoading(false);
   };
 
+  const handleDemoLogin = async (role: 'user' | 'agent' | 'admin') => {
+    setError('');
+    setLoading(true);
+    let email = 'user@example.com';
+    if (role === 'agent') {
+      email = 'agent@example.com';
+    } else if (role === 'admin') {
+      email = 'admin@example.com';
+    }
+    const password = 'password123';
+
+    // Visual autofill
+    setFormData({ email, password });
+
+    const result = await login(email, password);
+
+    if (result && result.success) {
+      navigate('/dashboard');
+    } else {
+      setError(result?.error || 'Demo login failed');
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div className="min-h-screen pt-24 pb-12 px-4 bg-gray-50 flex items-center justify-center">
       <Helmet>
-        <title>Login | Real Estate Pro</title>
+        <title>Login | EstateFlow</title>
       </Helmet>
       
       <motion.div
@@ -93,6 +118,47 @@ export default function Login() {
             {loading ? 'Logging in...' : 'Login'}
           </Button>
         </form>
+
+        <div className="mt-6 space-y-4">
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-200"></div>
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-2 bg-white text-gray-500">Or login as Demo User</span>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-3 gap-3">
+            <button
+              type="button"
+              onClick={() => handleDemoLogin('user')}
+              disabled={loading}
+              className="flex flex-col items-center justify-center p-2 border border-gray-200 hover:border-black rounded-xl bg-gray-50 hover:bg-black hover:text-white transition-all text-xs font-semibold group cursor-pointer"
+            >
+              <span className="text-lg mb-0.5 group-hover:scale-110 transition-transform">👤</span>
+              <span>Buyer</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleDemoLogin('agent')}
+              disabled={loading}
+              className="flex flex-col items-center justify-center p-2 border border-gray-200 hover:border-black rounded-xl bg-gray-50 hover:bg-black hover:text-white transition-all text-xs font-semibold group cursor-pointer"
+            >
+              <span className="text-lg mb-0.5 group-hover:scale-110 transition-transform">💼</span>
+              <span>Agent</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleDemoLogin('admin')}
+              disabled={loading}
+              className="flex flex-col items-center justify-center p-2 border border-gray-200 hover:border-black rounded-xl bg-gray-50 hover:bg-black hover:text-white transition-all text-xs font-semibold group cursor-pointer"
+            >
+              <span className="text-lg mb-0.5 group-hover:scale-110 transition-transform">👑</span>
+              <span>Admin</span>
+            </button>
+          </div>
+        </div>
 
         <div className="mt-8 pt-6 border-t border-gray-100 text-center">
           <p className="text-gray-600">

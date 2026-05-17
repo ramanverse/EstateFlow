@@ -1,7 +1,7 @@
 {
-  "name": "resume_project",
+  "name": "estateflow-server",
   "version": "1.0.0",
-  "description": "Real Estate Listing Platform - Buy, Sell, Rent Properties",
+  "description": "EstateFlow Listing Platform - Buy, Sell, Rent Properties",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,7 @@
     "prisma:migrate": "npx prisma migrate dev --name init",
     "prisma:reset": "npx prisma migrate reset",
     "prisma:seed": "node prisma/seed.js",
+    "seed": "node src/scripts/seed.js",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "build": "npm run build --prefix ../client",

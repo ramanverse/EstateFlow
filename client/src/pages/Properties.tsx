@@ -325,7 +325,7 @@ export default function Properties() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <p className="mb-4 text-xs font-medium uppercase tracking-[0.32em] text-white/50">Real Estate Pro</p>
+            <p className="mb-4 text-xs font-medium uppercase tracking-[0.32em] text-white/50">EstateFlow</p>
             <h1 className="text-4xl tracking-tight md:text-6xl">Search Properties</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-white/75 md:text-xl">
               Explore listings with cleaner controls, clearer results, and location-first filtering that feels easier to scan.

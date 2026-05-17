@@ -72,7 +72,7 @@ export default function Favorites() {
   return (
     <div className="min-h-screen bg-gray-50 px-4 pt-20 pb-16">
       <Helmet>
-        <title>My Favorites | Real Estate Pro</title>
+        <title>My Favorites | EstateFlow</title>
       </Helmet>
 
       <div className="mx-auto max-w-7xl">

@@ -21,6 +21,7 @@ const CITIES = ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai', 'Pune', 
 
 async function connectDB() {
     try {
+        console.log('Connecting to database:', process.env.DATABASE_URL);
         await mongoose.connect(process.env.DATABASE_URL);
         console.log('MongoDB Connected for Seeding');
     } catch (err) {
@@ -40,26 +41,17 @@ async function seed() {
 
     console.log('Creating users...');
 
+    const bcrypt = require('bcrypt');
+    const hashedPassword = await bcrypt.hash('password123', 10);
+
     // Create fixed users for testing
     const adminUser = await User.create({
         name: 'Admin User',
         email: 'admin@example.com',
-        password: 'password123', // In real app, hash this! Note: The current model stores plain text or uses pre-save hook. Assuming pre-save hook handles hashing if present, or we should hash it. 
-        // Checking User model... if it has hashing middleware, plain text is fine. If not, we might need to hash.
-        // For now, let's assume the controller/model handles it or just plain for seed.
-        // Wait, the authController hashes it. The model probably doesn't. 
-        // To be safe and since I can't easily import bcrypt here without checking if it's installed (it is), 
-        // I will use a simple hash or just plain text if the auth middleware handles login.
-        // Actually, let's import bcrypt since it's in package.json.
+        password: hashedPassword,
         phone: '9876543210',
         role: 'ADMIN'
     });
-
-    const bcrypt = require('bcrypt');
-    const hashedPassword = await bcrypt.hash('password123', 10);
-
-    // Update admin with hashed password
-    await User.findByIdAndUpdate(adminUser._id, { password: hashedPassword });
 
     const agentUser = await User.create({
         name: 'Agent User',
@@ -97,7 +89,7 @@ async function seed() {
     for (let i = 0; i < 200; i++) {
         const owner = allAgents[Math.floor(Math.random() * allAgents.length)];
         const city = CITIES[Math.floor(Math.random() * CITIES.length)];
-        const type = listingType = LISTING_TYPES[Math.floor(Math.random() * LISTING_TYPES.length)];
+        const type = LISTING_TYPES[Math.floor(Math.random() * LISTING_TYPES.length)];
         const price = type === 'RENT'
             ? faker.number.int({ min: 5000, max: 200000 })
             : faker.number.int({ min: 2000000, max: 50000000 });

@@ -51,17 +51,13 @@ export function Navigation() {
               className="flex items-center gap-3"
             >
               <img
-                src="/logo.png"
-                alt="Real Estate Pro logo"
-                onError={(event) => {
-                  event.currentTarget.onerror = null;
-                  event.currentTarget.src = '/logo.svg';
-                }}
+                src="/logo.svg"
+                alt="EstateFlow logo"
                 className="h-9 w-9 rounded-full object-contain md:h-11 md:w-11"
               />
               <div className="min-w-0">
                 <span className="block whitespace-nowrap text-lg font-semibold tracking-tight text-slate-900 md:text-xl">
-                  Real Estate Pro
+                  EstateFlow
                 </span>
                 <span className="hidden text-xs uppercase tracking-[0.28em] text-slate-400 sm:block">
                   Premium Property Search

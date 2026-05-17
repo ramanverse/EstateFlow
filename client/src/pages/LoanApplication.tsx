@@ -82,7 +82,7 @@ export default function LoanApplication() {
   return (
     <div className="min-h-screen pt-20 pb-16 px-4 bg-gray-50">
       <Helmet>
-        <title>Apply for Loan | Real Estate Pro</title>
+        <title>Apply for Loan | EstateFlow</title>
       </Helmet>
 
       <div className="max-w-4xl mx-auto">

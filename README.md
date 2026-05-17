@@ -1,6 +1,6 @@
-# Real Estate Pro — Full-Stack Property Platform
+# EstateFlow — Full-Stack Property Platform
 
-Real Estate Pro is a full-stack real estate application that enables users to discover, explore, and manage property listings through an integrated web platform. It combines map-based navigation, structured listing data, and user-driven actions such as saving properties and creating listings.
+EstateFlow is a full-stack real estate application that enables users to discover, explore, and manage property listings through an integrated web platform. It combines map-based navigation, structured listing data, and user-driven actions such as saving properties and creating listings.
 
 ---
 
@@ -22,7 +22,7 @@ This video covers:
 
 Real estate platforms are often fragmented across discovery, mapping, and user interaction layers. Users switch between tools to browse listings, view locations, and manage saved properties.
 
-Real Estate Pro consolidates these into a single platform:
+EstateFlow consolidates these into a single platform:
 
 - Centralized listing discovery
 - Map-integrated navigation
@@ -212,7 +212,7 @@ sequenceDiagram
 ## Repository Structure
 
 ```text
-Real_Estate_Pro/
+EstateFlow/
 ├── client/                 # React frontend
 │   ├── src/
 │   │   ├── pages/
@@ -418,4 +418,4 @@ REACT_APP_API_URL=http://localhost:3000/api
 
 ## Final Note
 
-Real Estate Pro demonstrates a complete full-stack system with real-world features including CRUD operations, authentication, map integration, and media handling, making it a strong representation of production-oriented web development.
+EstateFlow demonstrates a complete full-stack system with real-world features including CRUD operations, authentication, map integration, and media handling, making it a strong representation of production-oriented web development.

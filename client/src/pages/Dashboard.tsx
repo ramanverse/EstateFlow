@@ -53,7 +53,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen pt-20 pb-16 px-4 bg-gray-50">
       <Helmet>
-        <title>Dashboard | Real Estate Pro</title>
+        <title>Dashboard | EstateFlow</title>
       </Helmet>
 
       <div className="max-w-7xl mx-auto">

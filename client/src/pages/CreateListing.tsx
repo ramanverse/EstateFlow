@@ -135,7 +135,7 @@ export default function CreateListing() {
   return (
     <div className="min-h-screen bg-slate-50 pt-20 pb-16 md:pt-24 md:pb-20">
       <Helmet>
-        <title>Create Listing | Real Estate Pro</title>
+        <title>Create Listing | EstateFlow</title>
       </Helmet>
 
       <section className="px-4 pb-8">
@@ -155,7 +155,7 @@ export default function CreateListing() {
                   Create a listing that feels premium before anyone even opens it.
                 </h1>
                 <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 md:text-lg">
-                  Add the essentials, upload property images once, and publish a cleaner listing experience that matches the rest of Real Estate Pro.
+                  Add the essentials, upload property images once, and publish a cleaner listing experience that matches the rest of EstateFlow.
                 </p>
               </div>
 

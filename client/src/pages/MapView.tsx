@@ -94,7 +94,7 @@ export default function MapViewPage() {
   return (
     <div className="min-h-screen bg-slate-950 pt-20 text-white md:pt-24">
       <Helmet>
-        <title>Map Search | Real Estate Pro</title>
+        <title>Map Search | EstateFlow</title>
       </Helmet>
 
       <section className="px-4 pb-6">

@@ -177,7 +177,7 @@ export default function ListingDetail() {
   return (
     <div className="min-h-screen pt-20">
       <Helmet>
-        <title>{property.title} | Real Estate Pro</title>
+        <title>{property.title} | EstateFlow</title>
       </Helmet>
 
       {/* Back Button */}
@@ -431,11 +431,11 @@ export default function ListingDetail() {
                       <span>{property.owner?.phone || '+1 (555) 123-4567'}</span>
                     </a>
                     <a
-                      href={`mailto:${property.owner?.email || 'contact@realestatepro.com'}`}
+                      href={`mailto:${property.owner?.email || 'contact@estateflow.com'}`}
                       className="flex items-center gap-3 p-3 rounded-lg hover:bg-white transition-colors"
                     >
                       <Mail className="w-5 h-5" />
-                      <span>{property.owner?.email || 'contact@realestatepro.com'}</span>
+                      <span>{property.owner?.email || 'contact@estateflow.com'}</span>
                     </a>
                   </div>
                 </div>

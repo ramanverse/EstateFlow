@@ -21,12 +21,8 @@ export function LoadingScreen() {
           className="w-16 h-16 mx-auto mb-4 flex items-center justify-center"
         >
           <img
-            src="/logo.png"
-            alt="Real Estate Pro logo"
-            onError={(e) => {
-              e.currentTarget.onerror = null;
-              e.currentTarget.src = '/logo.svg';
-            }}
+            src="/logo.svg"
+            alt="EstateFlow logo"
             className="w-16 h-16 object-contain rounded-full"
           />
         </motion.div>
@@ -35,7 +31,7 @@ export function LoadingScreen() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <h2 className="text-xl tracking-tight">Real Estate Pro</h2>
+          <h2 className="text-xl tracking-tight">EstateFlow</h2>
           <p className="text-sm opacity-60 mt-1">Loading...</p>
         </motion.div>
       </motion.div>

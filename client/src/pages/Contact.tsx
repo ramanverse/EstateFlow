@@ -41,7 +41,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-slate-50 pt-20 md:pt-24">
       <Helmet>
-        <title>Contact Us | Real Estate Pro</title>
+        <title>Contact Us | EstateFlow</title>
       </Helmet>
 
       <section className="px-4 py-8">
@@ -55,7 +55,7 @@ export default function Contact() {
               <div>
                 <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.26em] text-amber-300">
                   <Mail className="h-4 w-4" />
-                  Contact Real Estate Pro
+                  Contact EstateFlow
                 </p>
                 <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">Let’s make property decisions feel easier and more personal.</h1>
                 <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 md:text-lg">
@@ -101,7 +101,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-slate-900">Email</h3>
-                      <p className="mt-1 text-slate-600">contact@realestatepro.com</p>
+                      <p className="mt-1 text-slate-600">contact@estateflow.com</p>
                       <p className="mt-1 text-sm text-slate-400">Best for enquiries, support, and callback requests.</p>
                     </div>
                   </div>

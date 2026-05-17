@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: real-estate-platform
+    name: estateflow-platform
     env: node
     buildCommand: npm install && npm run build
     startCommand: cd server && npm start

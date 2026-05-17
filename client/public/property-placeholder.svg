@@ -27,6 +27,6 @@
   <path d="M803 447H1016V690H803Z" fill="#ffffff" opacity="0.96" />
   <path d="M860 371H958L1046 447H775L860 371Z" fill="url(#accent)" />
   <rect x="852" y="520" width="108" height="170" fill="#102a5b" opacity="0.88" />
-  <text x="90" y="120" font-family="Arial, sans-serif" font-size="42" fill="#334155" opacity="0.7">Real Estate Pro</text>
+  <text x="90" y="120" font-family="Arial, sans-serif" font-size="42" fill="#334155" opacity="0.7">EstateFlow</text>
   <text x="90" y="170" font-family="Arial, sans-serif" font-size="24" fill="#64748b">Awaiting listing image</text>
 </svg>
