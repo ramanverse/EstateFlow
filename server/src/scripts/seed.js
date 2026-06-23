@@ -97,7 +97,7 @@ async function seed() {
         const numImages = faker.number.int({ min: 1, max: 5 });
         const images = [];
         for (let j = 0; j < numImages; j++) {
-            images.push({ url: faker.image.urlLoremFlickr({ category: 'house' }) });
+            images.push({ url: faker.image.url({ width: 800, height: 600 }) });
         }
 
         const listing = await Listing.create({
